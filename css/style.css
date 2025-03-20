@@ -12,18 +12,21 @@ div {
     height: 100%;
     }
 
+
 /* 導覽列 */
-.navBar {
-  list-style-type: none;
-  text-align: center;
-  background-color: orangered;
-}
+.navbar {
+    background-color: #ffe8e3;
+    display: flex; 
+    align-items: center; /* 垂直置中 */
+    justify-content: space-around; /* 讓左右兩側的元素分開 */
+    padding: 20px 20px; /* 內距，讓內容不要太貼邊 */
+    
+  }
 
 .navBar li {
   display: inline-block;
   padding: 20px;
 }
-
 
 .navBar li option {
   color: white;
