@@ -38,7 +38,7 @@ div {
 }
 
 ul a{
-  color: red;
+  color: white;
   text-decoration: none;
 }
 
@@ -56,7 +56,6 @@ ul a{
   height: 100px;
 }
 P {
-  color: black;
   font-size: 18px;
   text-align: center;
   font-weight: bold;
@@ -68,9 +67,32 @@ ul {
 /* 標題分隔 */
 h3 {
   border: 2px;
-  padding-left: 20px;
+  padding-left: 80px;
 }
 
 li{
-  padding: 3px;
+  padding: 3px 50px;
+  color: white;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.footer{
+  color: white;
+  background-color:#012f49 ;
+  padding-top: 30px;
+}
+
+.footer .row {
+  display: flex;
+  justify-content: space-between; /* 均勻分布 */
+  flex-wrap: wrap; /* 讓它可以自適應 */
+  gap: 5px; /* 調整區塊之間的間距 */
+  padding: 20px 30px; /* 內距減少，讓內容更緊湊 */
+}
+
+.footer .col-lg-3 {
+  flex: 1; /* 讓每個區塊平均佔據空間 */
+  max-width: 22%; /* 控制區塊寬度，讓四列靠近 */
+  min-width: 200px; /* 避免區塊過小 */
 }
