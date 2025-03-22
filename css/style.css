@@ -15,12 +15,12 @@ div {
 
 /* 導覽列 */
 .navbar {
-  background-color: #ffe8e3;
+  background-color: #E0F7FA;
   height: 250px;
 }
 
 .navBar {
-  background-color: orangered;
+  background-color: #1565C0;
   text-align: center;
   
 }
@@ -47,21 +47,14 @@ li a{
 }
 
 ol a{
-  color: white;
+  color: #333333;
   text-decoration: none;
   text-indent: 10px;
   font-weight: bold;
   padding-left: 50px;
 }
 
-div .col-2{
-  color: white;
-}
-
-
-
 .col-2 {
-  background-color: rgb(1, 47, 73);
   list-style-type: none; /* 移除預設圓點 */
   padding-left: 50px; /* 移除左邊縮進 */
   font-weight: bold;
@@ -81,12 +74,6 @@ div .col-2{
   height: 100px;
 }
 
-P {
-  font-size: 18px;
-  text-align: center;
-  font-weight: bold;
-}
-
 /* 最底下 */
 ul {
   list-style-type: none;
@@ -98,10 +85,9 @@ h3 {
   padding-left: 80px;
 }
 
-h2{
-  font-weight: bold;
+h1{
   padding-top: 50px;
-  padding-left: 50px;
+  padding-left: 40px;
 }
 
 li{
@@ -165,7 +151,6 @@ li{
 }
 
 .product-card button {
-  background-color: ;
   color: rgb(191, 0, 0)9;
   border: none;
   padding: 10px 25px;
