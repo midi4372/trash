@@ -6,6 +6,7 @@ body {
 /* 導覽列文字 */
 div {
   font-size: 25px;
+  font-weight: bold;
 }
 
 .carousel-inner img {
@@ -33,10 +34,11 @@ div {
   color: white;
   text-align: center;
   text-decoration: none;
+  font-size: 25px;
 }
 
 .navBar li a:hover {
-  color: black;
+  color: #FFD700;
 }
 
 
@@ -117,10 +119,12 @@ li{
 }
 
 .product-card {
-  border: 1px #666;
+
+  border: 1px solid gray;
   padding: 15px;
   text-align: center;
   border-radius: 10px;
+  opacity: 1;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -151,7 +155,7 @@ li{
 }
 
 .product-card button {
-  color: rgb(191, 0, 0)9;
+  color: gray;
   border: none;
   padding: 10px 25px;
   border-radius: 50px;
@@ -162,7 +166,7 @@ li{
 
 .product-card button:hover {
   background-color: rgb(111, 146, 182);
-  border-color: #999;
+  border-color: black ;
   transform: scale(1.05);
 }
 

@@ -4,167 +4,240 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"/>
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <title>front page</title>
 
-<!-- <style> div {
+    <!-- <style> div {
   border: 1px solid black;
 }
 </style> -->
-   
   </head>
   <body>
-<!-- 導覽列 -->
+    <!-- 導覽列 -->
     <div class="navbar">
-        <a style="margin-left: 100px; margin-right: -100px;" href="http://127.0.0.1:5501/front%20page.html">
-          <img  src="photo/logo.png" alt="logo">
-        </a>
-        <span>
-        <input style="width: 500px;" type="text" placeholder="Search Keyword" class="form-control" img src="./photo/search.png" alt="icon"  >
-        </span>
-        <a class="login-btn" href="login.html">
-          <img src="./photo/登入樣式.png">
-        </a>
-    <nav style="width: 100%;">
-      <ul class="navBar">
-        <li><a href="">3C</a></li>
-        <li><a href="">家電</a></li>
-        <li><a href="">生鮮</a></li>
-        <li><a href="">數位</a></li>
-        <li><a href="">生活</a></li>
-        <li><a href="">居家</a></li>
-        <li><a href="">美妝</a></li>
-        <li><a href="">醫療</a></li>
-        <li><a href="">治療</a></li>
-        <li><a href="">診療</a></li>
-        <li><a href="">日用</a></li>
-        <li><a href="">放棄治療</a></li>
-      </ul>
-    </nav>
-  </div>
-  <br><br><br><br><br><br>
+      <a
+        style="margin-left: 100px; margin-right: -100px"
+        href="http://127.0.0.1:5501/front%20page.html"
+      >
+        <img src="photo/logo.png" alt="logo" />
+      </a>
+      <span>
+        <input
+          style="width: 500px"
+          type="text"
+          placeholder="Search Keyword"
+          class="form-control"
+          img
+          src="./photo/search.png"
+          alt="icon"
+        />
+      </span>
+      <a class="login-btn" href="login.html">
+        <img src="./photo/登入樣式.png" />
+      </a>
+      <nav style="width: 100%">
+        <ul class="navBar">
+          <li><a href="">3C</a></li>
+          <li><a href="">家電</a></li>
+          <li><a href="">生鮮</a></li>
+          <li><a href="">數位</a></li>
+          <li><a href="">生活</a></li>
+          <li><a href="">居家</a></li>
+          <li><a href="">美妝</a></li>
+          <li><a href="">醫療</a></li>
+          <li><a href="">治療</a></li>
+          <li><a href="">診療</a></li>
+          <li><a href="">日用</a></li>
+          <li><a href="">放棄治療</a></li>
+        </ul>
+      </nav>
+    </div>
+    <br /><br /><br /><br /><br /><br />
 
-<!-- 右下角 客服按鈕 -->
-        <div>
-            <a href="./customer_service.html"><div id="reddiv">
-            </div></a>
+    <!-- 右下角 客服按鈕 -->
+    <div>
+      <a href="./customer_service.html"><div id="reddiv"></div></a>
+    </div>
+    <!-- 輪播圖 -->
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-1"></div>
+      <div class="col-2" style="background-color: #e3f2fd">
+        <ol>
+          <h1 style="font-weight: bold">熱門商品</h1>
+        </ol>
+        <ol>
+          <a href="">關節護具</a>
+        </ol>
+        <ol>
+          <a href="">拐杖</a>
+        </ol>
+        <ol>
+          <a href="">輪椅</a>
+        </ol>
+        <ol>
+          <a href="">拐杖</a>
+        </ol>
+      </div>
+      <div class="col-4">
+        <div
+          style="border-radius: 10px; border: 2px solid #d6d6d6"
+          id="Product"
+          data-bs-interval="2000"
+          class="carousel carousel-dark slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#Product"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#Product"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#Product"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
           </div>
-      </div> 
-<!-- 輪播圖 -->
-<div class="row">
-  <div class="col-1"></div>
-  <div class="col-1"></div>
-  <div class="col-2" style="background-color: #E3F2FD;"  >
-    <ol ><h1 style=" font-weight: bold;">熱門商品</h1></ol>
-    <ol ><a href="">關節護具</a></ol>
-    <ol><a href="">拐杖</a></ol>
-    <ol><a href="">輪椅</a></ol>
-    <ol><a href="">拐杖</a></ol>
-  </div>
-  <div class="col-4"> 
-    <div style=" border-radius: 10px; border: 2px solid #D6D6D6;" id="Product" data-bs-interval="2000" class="carousel carousel-dark slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#Product" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#Product" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#Product" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./photo/camera.jpg" class="rounded img-fluid" alt="" />
+            </div>
+            <div class="carousel-item active">
+              <img src="./photo/Laptop.jpg" class="rounded img-fluid" alt="" />
+            </div>
+            <div class="carousel-item active">
+              <img src="./photo/78.jpg" class="rounded img-fluid" alt="" />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#Product"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#Product"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./photo/camera.jpg" class="rounded img-fluid" alt="" />
+      <div class="col-2" style="background-color: #e3f2fd">
+        <ol>
+          <h1 style="font-weight: bold">熱門追蹤</h1>
+        </ol>
+        <ol>
+          <a href="">聽診器</a>
+        </ol>
+        <ol>
+          <a href="">紗布</a>
+        </ol>
+        <ol>
+          <a href="">食鹽水</a>
+        </ol>
+        <ol>
+          <a href="">紙膠帶</a>
+        </ol>
       </div>
-      <div class="carousel-item active">
-        <img src="./photo/Laptop.jpg" class="rounded img-fluid" alt="" />
+      <div class="col-1"></div>
+      <div class="col-1"></div>
+    </div>
+
+    <!-- 商品介紹 -->
+    <br /><br /><br /><br /><br /><br />
+    <div class="products">
+      <div class="product-card">
+        <a href="./albumPage/我愛您V2.html"><img src="./photo/78.jpg" /></a>
+        <h2>紙膠帶</h2>
+        <p>價格 : 52</p>
+        <button onclick="order('我愛您',520)">購買</button>
       </div>
-      <div class="carousel-item active">
-        <img src="./photo/78.jpg" class="rounded img-fluid" alt="" />
+
+      <div class="product-card">
+        <a href="./albumPage/LostInParadiseV2.html"
+          ><img src="./photo/638638899964900000.jpg"
+        /></a>
+        <h2>聽診器</h2>
+        <p>價格 : 800</p>
+        <button onclick="order('Lost in paradise',800)">購買</button>
+      </div>
+
+      <div class="product-card">
+        <a href="./albumPage/NeverSayGoodbyeV2.html"
+          ><img src="./photo/123.jpg"
+        /></a>
+        <h2>食鹽水</h2>
+        <p>價格 : 80</p>
+        <button onclick="order('Never say goodbye',800)">購買</button>
+      </div>
+
+      <div class="product-card">
+        <a href="./albumPage/2700V2.html"><img src="./photo/800x.jpg" /></a>
+        <h2>輪椅</h2>
+        <p>價格 : 6000</p>
+        <button onclick="order('27:00',600)">購買</button>
       </div>
     </div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#Product"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#Product"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div></div>
-  <div class="col-2" style="background-color: #E3F2FD;"  >
-    <ol><h1 style=" font-weight: bold;">熱門追蹤</h1></ol>
-    <ol><a href="">聽診器</a></ol>
-    <ol><a href="">紗布</a></ol>
-    <ol><a href="">食鹽水</a></ol>
-    <ol><a href="">紙膠帶</a></ol></div>
-  <div class="col-1"></div>
-  <div class="col-1"></div>
-</div>
-
-<!-- 商品介紹 -->
- <br><br><br><br><br><br>
-<div class="products">
-
-  <div class="product-card">
-    <a href="./albumPage/我愛您V2.html"><img src="./photo/78.jpg"></a>
-    <h2>紙膠帶</h2>
-    <p>價格 : 52</p>
-    <button onclick="order('我愛您',520)">購買</button>
-  </div>
-
-  <div class="product-card">
-    <a href="./albumPage/LostInParadiseV2.html"><img src="./photo/638638899964900000.jpg"></a>
-    <h2>聽診器</h2>
-    <p>價格 :  800</p>
-    <button onclick="order('Lost in paradise',800)">購買</button>
-  </div>
-
-  <div class="product-card">
-    <a href="./albumPage/NeverSayGoodbyeV2.html"><img src="./photo/123.jpg"></a>
-    <h2>食鹽水</h2>
-    <p>價格 : 80</p>
-    <button onclick="order('Never say goodbye',800)">購買</button>
-  </div>
-
-  <div class="product-card">
-    <a href="./albumPage/2700V2.html"><img src="./photo/800x.jpg"></a>
-    <h2>輪椅</h2>
-    <p>價格 :  6000</p>
-    <button onclick="order('27:00',600)">購買</button>
-  </div>
-
-</div>
-      <br><br><br><br><br><br><br><br><br><br><br>
- <!-- 懸浮按鈕往上 -->
-      <a href="#" class="topbutton">
-        <img src="./photo/TOP.png" style=" background: none; width: 64px; z-index: 100; position: fixed; right: 18px; bottom: 175px ;" alt="回頂端" title="點我回到上方">
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <!-- 懸浮按鈕往上 -->
+    <a href="#" class="topbutton">
+      <img
+        src="./photo/TOP.png"
+        style="
+          background: none;
+          width: 64px;
+          z-index: 100;
+          position: fixed;
+          right: 18px;
+          bottom: 175px;
+        "
+        alt="回頂端"
+        title="點我回到上方"
+      />
     </a>
     <script src="https://campus-xoops.tn.edu.tw/uploads/smooth-scroll.js"></script>
-<!-- 網頁最底下 -->
-<div class="footer" style=" padding-top: 20px;">
+    <!-- 網頁最底下 -->
+    <div class="footer" style="padding-top: 20px">
       <div class="row">
         <div class="col-1"></div>
         <div class="col-1"></div>
-        <div class="col-2">       
-           <h3>關於我們</h3>
+        <div class="col-2">
+          <h3>關於我們</h3>
           <ul>
             <li><a href="#">公司資訊</a></li>
             <li><a href="#">新聞稿</a></li>
             <li><a href="#">人才招募</a></li>
             <li><a href="#">服務公告</a></li>
-          </ul></div>
+          </ul>
+        </div>
         <div class="col-2">
           <h3>購物流程</h3>
           <ul>
@@ -174,7 +247,8 @@
             <li><a href="#">常見問題</a></li>
             <li><a href="#">退換貨資訊</a></li>
             <li><a href="#">聯繫客服</a></li>
-          </ul></div>
+          </ul>
+        </div>
         <div class="col-2">
           <h3>平台政策</h3>
           <ul>
@@ -183,22 +257,31 @@
             <li><a href="#">智財侵權檢舉</a></li>
             <li><a href="#">隱私權保護</a></li>
             <li><a href="#">消費者保護</a></li>
-          </ul></div>
-        <div class="col-2"> 
+          </ul>
+        </div>
+        <div class="col-2">
           <h3>聯繫我們</h3>
           <ul>
-          <li>電話:(04) 2326-5860</li>
-          <li>Email:123456789@ispan.com.tw</li>
-          <li>地址:台中市南屯區公益路二段51號18樓</li>
-        </ul>
+            <li>電話:(04) 2326-5860</li>
+            <li>Email:123456789@ispan.com.tw</li>
+            <li>地址:台中市南屯區公益路二段51號18樓</li>
+          </ul>
         </div>
-        <div class="col-1"> </div>
         <div class="col-1"></div>
-      </div> 
-<hr><div style="font-size: 18px;
-text-align: center;
-font-weight: bold;">Copyright © 2025 PoDaSheng. All Rights Reserved.</div>
-</div>
-
+        <div class="col-1"></div>
+      </div>
+      <hr />
+      <div style="font-size: 18px; text-align: center; font-weight: bold">
+        Copyright © 2025 PoDaSheng. All Rights Reserved.
+      </div>
+    </div>
+    <script>
+      function order(itemName) {
+        const params = new URLSearchParams();
+        params.append("item", itemName);
+        // params.append('age', '30');
+        window.location.href = "buypage.html?" + params.toString();
+      }
+    </script>
   </body>
 </html>

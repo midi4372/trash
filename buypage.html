@@ -15,7 +15,12 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <title>login</title>
+    <title>front page</title>
+
+    <!-- <style> div {
+  border: 1px solid black;
+}
+</style> -->
   </head>
   <body>
     <!-- 導覽列 -->
@@ -57,76 +62,20 @@
         </ul>
       </nav>
     </div>
-    <br><br>
-    <!--登入畫面  -->
-    <div style=" background-color: white; max-width: 500px; margin-left: 1100px" class="login-wrapper">
-      <div class="container">
-        <div class="login-box">
-          <div class="login-header"></div>
-          <form>
-            <fieldset style="border-radius: 10px; border: 2px solid #ccc; padding: 10px">
-              <legend style=" text-align: center";>登入會員</legend>
-              <div class="form-group">
-                <label for="username">帳號</label>
-                <div class="input-box">
-                  <input
-                    style="width: 400px"
-                    type="text"
-                    id="username"
-                    class="form-control"
-                    placeholder="Enter your username or email"
-                  />
-                  <span class="icon"><i class="fa fa-user"></i></span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="password">密碼</label>
-                <div class="input-box">
-                  <input
-                    style="width: 400px"
-                    type="password"
-                    id="password"
-                    class="form-control"
-                    placeholder="Enter your password"
-                  />
-                  <span class="icon"
-                    ><i id="togglePassword" class="fa fa-eye"></i
-                  ></span>
-                </div>
-              </div>
-              <div class="options">
-                <div class="remember-me">
-                  <input type="checkbox" id="rememberMe" />
-                  <label for="rememberMe">記住我</label>
-                  <div class="forgot-password">
-                    <a style="  text-decoration: none; font-size: 16px" href="#">忘記密碼?</a>
-                  </div>
-                </div>
-              </div>
-              <div class="action-buttons">
-                <button type="submit" class="btn btn-primary">Login</button>
-                <a href="#" class="btn btn-secondary">Register</a>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <br /><br />
+    <br /><br /><br /><br /><br /><br />
 
     <!-- 右下角 客服按鈕 -->
     <div>
       <a href="./customer_service.html"><div id="reddiv"></div></a>
     </div>
-    <br /><br /><br />
 
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <!-- 懸浮按鈕往上 -->
-    <a href="#">
+    <a href="#" class="topbutton">
       <img
         src="./photo/TOP.png"
         style="
-          background-color: transparent;
+          background: none;
           width: 64px;
           z-index: 100;
           position: fixed;
@@ -138,7 +87,6 @@
       />
     </a>
     <script src="https://campus-xoops.tn.edu.tw/uploads/smooth-scroll.js"></script>
-
     <!-- 網頁最底下 -->
     <div class="footer" style="padding-top: 20px">
       <div class="row">
@@ -190,5 +138,25 @@
         Copyright © 2025 PoDaSheng. All Rights Reserved.
       </div>
     </div>
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+      // 當 DOM 內容加載完成後執行的程式碼
+      const urlParams = new URLSearchParams(window.location.search);
+      const itemName = urlParams.get('item');  // "John"
+      // const age = urlParams.get('age');    // "30"
+      console.log(itemName);
+      setItem(itemName);
+    });
+
+    function setItem(itemName) {
+      let insertItem = document.querySelector('body > br:nth-child(7)');
+
+      const newDiv = document.createElement('div');
+      newDiv.className = 'myClass';
+      newDiv.textContent = itemName;
+      // insertItem.append(newDiv);
+      insertItem.insertAdjacentElement('afterend', newDiv);
+    }
+    </script>
   </body>
 </html>
