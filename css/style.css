@@ -56,6 +56,22 @@ ol a{
   padding-left: 50px;
 }
 
+p a{
+  color: #333333;
+  text-decoration: none;
+  text-indent: 10px;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+td a{
+  color: #333333;
+  text-decoration: none;
+  text-indent: 10px;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
 .col-2 {
   list-style-type: none; /* 移除預設圓點 */
   padding-left: 50px; /* 移除左邊縮進 */
@@ -169,6 +185,8 @@ li{
   border-color: black ;
   transform: scale(1.05);
 }
+
+
 
 
 

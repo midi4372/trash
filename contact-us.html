@@ -16,6 +16,11 @@
       crossorigin="anonymous"
     />
     <title>contact-us</title>
+    <!-- <style>
+      div {
+        border: 1px solid black;
+      }
+    </style> -->
   </head>
   <body>
     <!-- 導覽列 -->
@@ -52,23 +57,38 @@
           <li><a href="">治療</a></li>
           <li><a href="">診療</a></li>
           <li><a href="">日用</a></li>
-          <li><a href="">放棄治療</a></li>
+          <li><a href="http://127.0.0.1:5501/contact-us.html">聯絡我們</a></li>
         </ul>
       </nav>
     </div>
-    <br /><br /><br /><br />
+    <br><br><br><br>
     <!-- 估狗地圖 -->
-    <iframe
-      style="background-color: white; max-width: 580px; margin-left: 1100px"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1863989.260383154!2d118.21206005625!3d24.150540499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9650422ae1%3A0x334dfd5796c49ff6!2z6LOH5bGV5ZyL6ZqbLeWOnyDos4fnrZbmnIMt5pW45L2N5pWZ6IKy56CU56m25omALeS4reWNgA!5e0!3m2!1szh-TW!2stw!4v1742441279359!5m2!1szh-TW!2stw"
-      width="100%"
-      height="600"
-      style="border: 0; align-self: auto"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-    <br /><br /><br /><br />
+    <div class="row" style="text-align:center">
+      <!-- 左側聯絡資訊 -->
+      <div class="col-6" >
+          <h2 >📞 聯絡我們</h2>
+          <div style="padding: 50px;">
+              <p style="padding: 10px;">電話：(04) 2326-5860</p>
+              <p style="padding: 10px;"><a href="mailto:123456789@ispan.com.tw">Email：123456789@ispan.com.tw</a></p>
+              <p style="padding: 10px;">地址：台中市南屯區公益路二段51號18樓</p>
+          </div>
+      </div>
+
+      <!-- 右側 Google 地圖 -->
+      <div class="col-6">
+        <iframe
+          style="max-width: 780px;"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1863989.260383154!2d118.21206005625!3d24.150540499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9650422ae1%3A0x334dfd5796c49ff6!2z6LOH5bGV5ZyL6ZqbLeWOnyDos4fnrZbmnIMt5pW45L2N5pWZ6IKy56CU56m25omALeS4reWNgA!5e0!3m2!1szh-TW!2stw!4v1742441279359!5m2!1szh-TW!2stw"
+          width="100%"
+          height="500"
+          style="border: 0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <br /><br />
     <!-- 右下角 客服按鈕 -->
     <div>
       <a href="./customer_service.html"><div id="reddiv"></div></a>
