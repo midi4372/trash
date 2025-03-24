@@ -53,7 +53,7 @@ ol a{
   text-decoration: none;
   text-indent: 10px;
   font-weight: bold;
-  padding-left: 50px;
+  padding-left: 40px;
 }
 
 p a{
@@ -105,7 +105,7 @@ h3 {
 
 h1{
   padding-top: 50px;
-  padding-left: 40px;
+  /* padding-left: 40px; */
 }
 
 li{
@@ -162,7 +162,11 @@ li{
   margin: 10px 0;
   color: black;
   font-weight: bold;
+}
 
+div h2 {
+  margin: 10px 0;
+  font-weight: bold;
 }
 
 .product-card p {
