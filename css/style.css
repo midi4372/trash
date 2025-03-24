@@ -180,13 +180,75 @@ li{
   font-weight: bold;
 }
 
+.product-card button a {
+  color: gray;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition:  0.3s ease,  0.2s ease;
+  font-weight: bold;
+}
+
 .product-card button:hover {
   background-color: rgb(111, 146, 182);
   border-color: black ;
   transform: scale(1.05);
 }
 
+/* 商品 */
 
-
-
-
+.container {
+    width: 80%;
+    max-width: 1000px;
+    background: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.product {
+    display: flex;
+}
+.product img {
+    width: 50%;
+    border-radius: 10px;
+}
+.details {
+    padding: 20px;
+    width: 50%;
+}
+.price {
+    font-size: 24px;
+    color: red;
+}
+.options {
+    margin-top: 10px;
+}
+.options label {
+    margin-right: 10px;
+}
+.buy-buttons {
+    margin-top: 20px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.cart-btn {
+    background: orange;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.buy-btn {
+    background: red;
+    color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
