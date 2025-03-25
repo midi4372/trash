@@ -147,9 +147,9 @@
       }
 
       .item-spec {
-        font-size: 0.95rem;
+        font-size: 25px;
         color: #777;
-        margin-bottom: 10px;
+        margin-bottom: 2px;
       }
 
       .item-cost {
@@ -282,7 +282,7 @@
       }
 
       .rt-button-primary {
-        background: #007bff;
+        background: black;
         color: #fff;
       }
 
@@ -704,14 +704,14 @@
               </div>
             </div>
           </div>
-              <!-- 結帳按鈕 -->
-                <div class="section-content">
-                  <div class="term-group">
-                    <ul class="rt-list-disc"></ul>
-                  </div>
-                  <button class="rt-button rt-button-primary">結帳</button>
-                </div>
+          <!-- 結帳按鈕 -->
+          <div class="collapse" id="demo">哈哈沒有啦 我沒做結帳啦
+          </div>
+          <div class="section-content">
+            <div class="term-group">
+              <ul class="rt-list-disc"></ul>
             </div>
+            <button data-bs-toggle="collapse" data-bs-target="#demo" class=" rt-button rt-button-primary btn-dark">結帳</button>
           </div>
         </div>
       </div>
@@ -787,39 +787,40 @@
     </div>
     <!-- 跳轉 -->
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const itemName = urlParams.get("itemName");
-    const price = urlParams.get("price");
-    const size = urlParams.get("size");
-    const color = urlParams.get("color");
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const itemName = urlParams.get("itemName");
+        const price = urlParams.get("price");
+        const size = urlParams.get("size");
+        const color = urlParams.get("color");
 
-    // 更新商品名稱
-    if (itemName) {
-        document.querySelector(".item-name span:last-child").innerText = itemName;
-    }
+        // 更新商品名稱
+        if (itemName) {
+          document.querySelector(".item-name span:last-child").innerText =
+            itemName;
+        }
 
-    // 更新價格
-    if (price) {
-        document.querySelector(".item-cost span").innerText = price;
-    }
+        // 更新價格
+        if (price) {
+          document.querySelector(".item-cost span").innerText = price;
+        }
 
-    // 更新尺寸（若無則隱藏）
-    let sizeElement = document.querySelector(".item-spec");
-    if (size && size !== "N/A") {
-        sizeElement.querySelector("span").innerText = size;
-    } else {
-        sizeElement.style.display = "none"; // 隱藏尺寸欄位
-    }
+        // 更新尺寸（若無則隱藏）
+        let sizeElement = document.querySelector(".item-spec");
+        if (size && size !== "N/A") {
+          sizeElement.querySelector("span").innerText = size;
+        } else {
+          sizeElement.style.display = "none"; // 隱藏尺寸欄位
+        }
 
-    // 更新顏色（若無則隱藏）
-    let colorElement = document.querySelector(".item-color"); // 確保HTML有這個元素
-    if (color && color !== "N/A") {
-        colorElement.querySelector("span").innerText = color;
-    } else if (colorElement) {
-        colorElement.style.display = "none"; // 隱藏顏色欄位
-    }
-});
+        // 更新顏色（若無則隱藏）
+        let colorElement = document.querySelector(".item-color"); // 確保HTML有這個元素
+        if (color && color !== "N/A") {
+          colorElement.querySelector("span").innerText = color;
+        } else if (colorElement) {
+          colorElement.style.display = "none"; // 隱藏顏色欄位
+        }
+      });
 
       function setItem(itemName) {
         let insertItem = document.querySelector(
