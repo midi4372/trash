@@ -15,7 +15,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <title>buy page</title>
+    <title>buypage_2</title>
 
     <style>
       div p {
@@ -36,7 +36,7 @@
     <div class="navbar">
       <a
         style="margin-left: 100px; margin-right: -100px"
-        href="http://127.0.0.1:5501/front%20page.html"
+        href="./front page.html"
       >
         <img src="photo/logo.png" alt="logo" />
       </a>
@@ -68,7 +68,7 @@
           <li><a href="">治療</a></li>
           <li><a href="">診療</a></li>
           <li><a href="">日用</a></li>
-          <li><a href="http://127.0.0.1:5501/contact-us.html">聯絡我們</a></li>
+          <li><a href="./contact-us.html">聯絡我們</a></li>
         </ul>
       </nav>
     </div>
@@ -180,34 +180,64 @@
       </div>
     </div>
     <script>
-      function order(itemName) {
-        const params = new URLSearchParams();
-        params.append("item", itemName);
-        // params.append('age', '30');
-        window.location.href = "checkout.html?" + params.toString();
-      }
-      // (直接購買) 按鈕事件綁定(把商品資訊準備帶到下單頁) 
-      let btn = document.querySelector('body > div.container > div > div > div.buy-buttons > button.buy-btn');
-        console.log(btn);
-        btn.addEventListener('click', function() {
+      // function order(itemName) {
+      //   const params = new URLSearchParams();
+      //   params.append("item", itemName);
+      //   // params.append('age', '30');
+      //   window.location.href = "checkout.html?" + params.toString();
+      // }
+      // // (直接購買) 按鈕事件綁定(把商品資訊準備帶到下單頁) 
+      // let btn = document.querySelector('body > div.container > div > div > div.buy-buttons > button.buy-btn');
+      //   console.log(btn);
+      //   btn.addEventListener('click', function() {
+      //     const params = new URLSearchParams();
+
+
+      //     // 商品名
+      //     let itemName = document.querySelector('body > div.container > div > div > h1').innerHTML;
+      //     params.append("itemName", itemName);
+
+      //     // 商品價
+      //     let price = document.querySelector('body > div.container > div > div > p.price').innerHTML;
+      //     console.log(price);
+      //     let size = document.querySelector('body > div.container > div > div > div.options > select').value;
+      //     console.log(size);
+      //     let color = document.querySelector('body > div.container > div > div > div:nth-child(4) > select').value;
+      //     console.log(color);
+      //     params.append("price", price);
+      //     params.append("size", size);
+      //     params.append("color", color);
+      //     window.location.href = "./checkout.html?" + params.toString();
+      //   });
+      document.addEventListener('DOMContentLoaded', function() {
+  let btn = document.querySelector('body > div.container > div > div > div.buy-buttons > button.buy-btn');
+  if (btn) {
+      btn.addEventListener('click', function() {
           const params = new URLSearchParams();
 
-          // 商品名
+          // 商品名稱（總是存在的）
           let itemName = document.querySelector('body > div.container > div > div > h1').innerHTML;
           params.append("itemName", itemName);
 
-          // 商品價
+          // 商品價格（總是存在的）
           let price = document.querySelector('body > div.container > div > div > p.price').innerHTML;
-          console.log(price);
-          let size = document.querySelector('body > div.container > div > div > div.options > select').value;
-          console.log(size);
-          let color = document.querySelector('body > div.container > div > div > div:nth-child(4) > select').value;
-          console.log(color);
           params.append("price", price);
+
+          // 尺寸（可能不存在）
+          let sizeSelect = document.querySelector('body > div.container > div > div > div.options > select');
+          let size = sizeSelect ? sizeSelect.value : 'N/A'; // 如果不存在，設為 'N/A'
           params.append("size", size);
+
+          // 顏色（可能不存在）
+          let colorSelect = document.querySelector('body > div.container > div > div > div:nth-child(4) > select');
+          let color = colorSelect ? colorSelect.value : 'N/A'; // 如果不存在，設為 'N/A'
           params.append("color", color);
+
+          // 跳轉到 checkout.html
           window.location.href = "checkout.html?" + params.toString();
-        });
+      });
+  }
+});
     </script>
   </body>
 </html>

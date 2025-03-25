@@ -15,7 +15,313 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <title>front page</title>
+    <style>
+      /* 基礎樣式 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* 頂部區域 */
+      .wrapper-top-area {
+        margin-bottom: 20px;
+      }
+
+      .d-flex {
+        display: flex;
+      }
+
+      .icon-angle-left {
+        width: 24px;
+        height: 24px;
+        background: url("https://via.placeholder.com/24") no-repeat center;
+        background-size: contain;
+        cursor: pointer;
+      }
+
+      /* 結帳表單 */
+      .checkout-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 20px;
+      }
+
+      .col-4 {
+        flex: 0 0 300px;
+      }
+
+      /* 區塊通用樣式 */
+      .section-container {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background: #f9f9f9;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+      }
+
+      .section-header-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .section-content {
+        padding-top: 10px;
+      }
+
+      /* 商品介紹區塊 */
+      .purchase-item-block {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .item-image {
+        width: 120px;
+        height: 120px;
+        background: #ddd;
+        border-radius: 5px;
+      }
+
+      .item-content {
+        flex: 1;
+      }
+
+      .item-name-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .item-name {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #222;
+      }
+
+      .rt-label {
+        display: inline-block;
+        padding: 2px 8px;
+        font-size: 0.85rem;
+        background: #e0e0e0;
+        color: #555;
+        border-radius: 3px;
+        margin-right: 10px;
+      }
+
+      .item-amount {
+        font-size: 1rem;
+        color: #666;
+      }
+
+      .item-spec {
+        font-size: 0.95rem;
+        color: #777;
+        margin-bottom: 10px;
+      }
+
+      .item-cost {
+        font-size: 1.2rem;
+        color: #dc3545;
+        font-weight: bold;
+      }
+
+      /* 運送方式區塊 */
+      .delivery-group-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .delivery-item {
+        flex: 0 0 200px;
+      }
+
+      .rt-form-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .delivery-form-group {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: border-color 0.3s;
+      }
+
+      .delivery-form-group:hover,
+      .delivery-form-group input:checked + label {
+        border-color: #007bff;
+        background: #e7f3ff;
+      }
+
+      .rt-form-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .item-form-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .item-label-name {
+        font-size: 1rem;
+        color: #333;
+      }
+
+      .item-label-price {
+        font-size: 0.85rem;
+        color: #777;
+      }
+
+      /* 付款方式區塊 */
+      .payment-group-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .payment-item {
+        flex: 0 0 200px;
+      }
+
+      .payment-form-group {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: border-color 0.3s;
+      }
+
+      .payment-form-group:hover,
+      .payment-form-group input:checked + label {
+        border-color: #007bff;
+        background: #e7f3ff;
+      }
+
+      /* 備註區塊 */
+      .message-form-group {
+        margin-bottom: 20px;
+      }
+
+      .rt-form-input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      /* 結帳總金額區塊 */
+      .checkout-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        font-size: 1rem;
+      }
+
+      .checkout-item-name {
+        color: #555;
+      }
+
+      .checkout-item-price {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .final-total-price {
+        padding: 15px 0;
+        border-top: 1px solid #ddd;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #dc3545;
+      }
+
+      .rt-button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .rt-button-primary {
+        background: #007bff;
+        color: #fff;
+      }
+
+      .rt-button-primary:hover {
+        background: #0056b3;
+      }
+
+      /* 圖標樣式 */
+      .icon-store,
+      .icon-delivery,
+      .icon-payment,
+      .icon-info,
+      .icon-angle-right,
+      .icon-edit,
+      .icon-add,
+      .icon-delete {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url("https://via.placeholder.com/20") no-repeat center;
+        background-size: contain;
+        vertical-align: middle;
+      }
+
+      /* 響應式設計 */
+      @media (max-width: 768px) {
+        .col-4 {
+          flex: 1;
+          min-width: 100%;
+        }
+
+        .delivery-item,
+        .payment-item {
+          flex: 1;
+          min-width: 100%;
+        }
+      }
+    </style>
+    <title>checkout</title>
 
     <!-- <style> div {
   border: 1px solid black;
@@ -27,7 +333,7 @@
     <div class="navbar">
       <a
         style="margin-left: 100px; margin-right: -100px"
-        href="http://127.0.0.1:5501/front%20page.html"
+        href="./front page.html"
       >
         <img src="photo/logo.png" alt="logo" />
       </a>
@@ -59,18 +365,358 @@
           <li><a href="">治療</a></li>
           <li><a href="">診療</a></li>
           <li><a href="">日用</a></li>
-          <li><a href="http://127.0.0.1:5501/contact-us.html">聯絡我們</a></li>
+          <li><a href="./contact-us.html">聯絡我們</a></li>
         </ul>
       </nav>
     </div>
-    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br />
 
     <!-- 右下角 客服按鈕 -->
     <div>
       <a href="./contact-us.html"><div id="reddiv"></div></a>
-    </div> 
+    </div>
     <!-- 商品介紹 -->
-    <br><br><br><br><br><br><br><br><br>
+    <div class="container">
+      <!-- 頂部返回按鈕 -->
+      <div class="wrapper-top-area">
+        <div class="d-flex">
+          <span class="icon-angle-left"></span>
+        </div>
+      </div>
+
+      <!-- 結帳表單 -->
+      <div class="checkout-form">
+        <div class="row">
+          <!-- 左側：商品、運送、付款、備註 -->
+          <div>
+            <div>
+              <!-- 商品介紹區塊 -->
+              <div class="section-container purchase-section">
+                <div
+                  class="section-header d-flex justify-content-between align-items-center"
+                >
+                  <div class="section-header-title">
+                    <span class="icon-store"></span>
+                    資展 Mart
+                  </div>
+                </div>
+                <div class="section-content">
+                  <div class="purchase-item-block d-flex flex-items-start">
+                    <div class="item-content">
+                      <div class="item-name-block d-flex">
+                        <div class="item-name flex-fill">
+                          <span class="rt-label">跛腳速送</span>
+                          <span>標題</span>
+                        </div>
+                        <div class="item-amount">x1</div>
+                      </div>
+                      <div class="item-spec">
+                        <span>尺寸</span>
+                      </div>
+                      <div class="item-cost">
+                        <span>$ 價格</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 運送方式區塊 -->
+              <div class="section-container delivery-receiver-section">
+                <div class="section-header d-flex flex-items-center">
+                  <div class="section-header-title">
+                    <span class="icon-delivery"></span>
+                    運送方式
+                  </div>
+                </div>
+                <div class="section-content">
+                  <div class="delivery-group">
+                    <div
+                      class="delivery-group-content d-flex flex-items-start row"
+                    >
+                      <div class="delivery-item col-4">
+                        <div class="rt-form-group delivery-form-group">
+                          <input
+                            type="radio"
+                            id="dway_SEVEN"
+                            name="selectedDelivery"
+                            value="SEVEN"
+                          />
+                          <label for="dway_SEVEN" class="rt-form-label">
+                            <span class="item-form-label">
+                              <span class="item-label-name">7-11取貨</span>
+                              <span class="item-label-price">$0</span>
+                            </span>
+                          </label>
+                          <div class="receiver-item">
+                            <div style="display: none">
+                              <span class="receiver-item-main">蔡*杰</span>
+                              <span class="receiver-item-main">0911******</span>
+                              <button class="rt-button">
+                                選擇其他收件資訊
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="delivery-item col-4">
+                        <div class="rt-form-group delivery-form-group">
+                          <input
+                            type="radio"
+                            id="dway_FAMI"
+                            name="selectedDelivery"
+                            value="FAMI"
+                          />
+                          <label for="dway_FAMI" class="rt-form-label">
+                            <span class="item-form-label">
+                              <span class="item-label-name">全家取貨</span>
+                              <span class="item-label-price">$0</span>
+                            </span>
+                          </label>
+                          <div class="receiver-item">
+                            <div style="display: none">
+                              <span class="receiver-item-main">蔡*杰</span>
+                              <span class="receiver-item-main">0911******</span>
+                              <button class="rt-button">
+                                選擇其他收件資訊
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 運送方式彈出視窗 -->
+                <div class="rt-modal-wrap">
+                  <div class="rt-modal-overlay" style="display: none">
+                    <div class="rt-modal-container" style="display: none">
+                      <div class="rt-modal">
+                        <button
+                          type="button"
+                          class="rt-modal-close-button"
+                          style="display: none"
+                        ></button>
+                        <div class="rt-modal-title">
+                          <div>選擇收件資訊</div>
+                        </div>
+                        <div class="rt-modal-content">
+                          <div>
+                            <div class="shipping-template-list">
+                              <div
+                                class="shipping-template-list-title d-flex flex-justify-between align-items-center"
+                              >
+                                <div class="flex-fill">收件資料</div>
+                                <button class="rt-button">
+                                  <i class="icon-add"></i>新增
+                                </button>
+                              </div>
+                              <div class="shipping-template-list-content">
+                                <div class="shipping-list-item">
+                                  <div
+                                    class="rt-form-group shipping-template-list-form-group"
+                                  >
+                                    <input
+                                      type="radio"
+                                      id="tempId0"
+                                      name="checkedTemplateId"
+                                      value="27829108"
+                                    />
+                                    <label for="tempId0" class="rt-form-label">
+                                      <span class="item-form-label">
+                                        <div class="flex">
+                                          <span class="item-label-name"
+                                            >蔡*杰</span
+                                          >
+                                          <span class="item-label-phone"
+                                            >0911******</span
+                                          >
+                                        </div>
+                                        <span class="item-label-address"
+                                          >***********路一段261巷21號</span
+                                        >
+                                      </span>
+                                    </label>
+                                  </div>
+                                  <button type="button" class="rt-button">
+                                    <i class="icon-delete"></i>刪除
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="rt-modal-action">
+                          <div>
+                            <button type="button" class="rt-button">
+                              取消
+                            </button>
+                            <button
+                              type="button"
+                              class="rt-button rt-button-primary"
+                            >
+                              使用這個收件資訊
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rt-modal-close-trigger"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 付款方式區塊 -->
+              <div class="section-container payment-section">
+                <div class="section-header flex flex-items-center">
+                  <div class="section-header-title">
+                    <span class="icon-payment"></span>
+                    <span>付款方式</span>
+                  </div>
+                </div>
+                <div class="section-content">
+                  <div class="payment-group">
+                    <div
+                      class="payment-group-content flex flex-items-start row"
+                    >
+                      <div class="payment-item col-4">
+                        <div class="rt-form-group payment-form-group">
+                          <input
+                            type="radio"
+                            id="pway_PP_PI"
+                            name="selectedPayment"
+                            value="PP_PI"
+                          />
+                          <label for="pway_PP_PI" class="rt-form-label">
+                            <span class="item-form-label">
+                              <span class="item-label-name">Pi 拍錢包</span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="payment-item col-4">
+                        <div class="rt-form-group payment-form-group">
+                          <input
+                            type="radio"
+                            id="pway_PP_CRD"
+                            name="selectedPayment"
+                            value="PP_CRD"
+                          />
+                          <label for="pway_PP_CRD" class="rt-form-label">
+                            <span class="item-form-label">
+                              <span class="item-label-name"
+                                >信用卡(一次付清)</span
+                              >
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="payment-item col-4">
+                        <div class="rt-form-group payment-form-group">
+                          <input
+                            type="radio"
+                            id="pway_PP_CRD_N3"
+                            name="selectedPayment"
+                            value="PP_CRD_N3"
+                          />
+                          <label for="pway_PP_CRD_N3" class="rt-form-label">
+                            <span class="item-form-label">
+                              <span class="item-label-name"
+                                >信用卡(3期0利率)</span
+                              >
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="payment-item col-4">
+                        <div class="rt-form-group payment-form-group">
+                          <input
+                            type="radio"
+                            id="pway_PP_CRD_N6"
+                            name="selectedPayment"
+                            value="PP_CRD_N6"
+                          />
+                          <label for="pway_PP_CRD_N6" class="rt-form-label">
+                            <span class="item-form-label">
+                              <span class="item-label-name"
+                                >信用卡(6期0利率)</span
+                              >
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="payment-item col-4">
+                        <div class="rt-form-group payment-form-group">
+                          <input
+                            type="radio"
+                            id="pway_PL_ATM"
+                            name="selectedPayment"
+                            value="PL_ATM"
+                          />
+                          <label for="pway_PL_ATM" class="rt-form-label">
+                            <span class="item-form-label">
+                              <span class="item-label-name">ATM轉帳</span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="payment-item col-4">
+                        <div class="rt-form-group payment-form-group">
+                          <input
+                            type="radio"
+                            id="pway_PL_ACCOUNT"
+                            name="selectedPayment"
+                            value="PL_ACCOUNT"
+                          />
+                          <label for="pway_PL_ACCOUNT" class="rt-form-label">
+                            <span class="item-form-label">
+                              <span class="item-label-name">餘額付款</span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 備註區塊 -->
+              <div class="section-container message-section">
+                <div class="section-content">
+                  <div class="message-group">
+                    <div class="rt-form-group message-form-group">
+                      <label for="esUserName" class="rt-form-label">備註</label>
+                      <div class="rt-form-control">
+                        <input
+                          id="esUserName"
+                          placeholder="給賣家的話"
+                          type="text"
+                          maxlength="250"
+                          class="rt-form-input"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-items-center">
+                    <a href="javascript:;"><span class="icon-info"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+              <!-- 結帳按鈕 -->
+                <div class="section-content">
+                  <div class="term-group">
+                    <ul class="rt-list-disc"></ul>
+                  </div>
+                  <button class="rt-button rt-button-primary">結帳</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br /><br /><br />
     <!-- 懸浮按鈕往上 -->
     <a href="#" class="topbutton">
       <img
@@ -139,23 +785,51 @@
         Copyright © 2025 PoDaSheng. All Rights Reserved.
       </div>
     </div>
+    <!-- 跳轉 -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // 當 DOM 內容加載完成後執行的程式碼
-        const urlParams = new URLSearchParams(window.location.search);
-        const itemName = urlParams.get("item"); // "John"
-        // const age = urlParams.get('age');    // "30"
-        console.log(itemName);
-        setItem(itemName);
-      });
+document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const itemName = urlParams.get("itemName");
+    const price = urlParams.get("price");
+    const size = urlParams.get("size");
+    const color = urlParams.get("color");
+
+    // 更新商品名稱
+    if (itemName) {
+        document.querySelector(".item-name span:last-child").innerText = itemName;
+    }
+
+    // 更新價格
+    if (price) {
+        document.querySelector(".item-cost span").innerText = price;
+    }
+
+    // 更新尺寸（若無則隱藏）
+    let sizeElement = document.querySelector(".item-spec");
+    if (size && size !== "N/A") {
+        sizeElement.querySelector("span").innerText = size;
+    } else {
+        sizeElement.style.display = "none"; // 隱藏尺寸欄位
+    }
+
+    // 更新顏色（若無則隱藏）
+    let colorElement = document.querySelector(".item-color"); // 確保HTML有這個元素
+    if (color && color !== "N/A") {
+        colorElement.querySelector("span").innerText = color;
+    } else if (colorElement) {
+        colorElement.style.display = "none"; // 隱藏顏色欄位
+    }
+});
 
       function setItem(itemName) {
-        let insertItem = document.querySelector('body > div.container > div > div > div.buy-buttons > button.buy-btn');
+        let insertItem = document.querySelector(
+          "body > div.container > div > div > div.buy-buttons > button.buy-btn"
+        );
 
         const newDiv = document.createElement("div");
         newDiv.className = "myClass";
         newDiv.textContent = itemName;
-         insertItem.append(newDiv);
+        insertItem.append(newDiv);
         insertItem.insertAdjacentElement("afterend", newDiv);
       }
     </script>
